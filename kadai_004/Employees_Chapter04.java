@@ -20,7 +20,7 @@ public class Employees_Chapter04 {
                 "Ayase0611"
             );
 
-            System.out.println("データベース接続成功:" + url);
+            System.out.println("データベース接続成功:" + con);
 
             // SQLクエリを準備
             statement = con.createStatement();
