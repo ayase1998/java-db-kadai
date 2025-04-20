@@ -11,19 +11,18 @@ import com.example.springkadaitodo.service.ToDoService;
 
 @Controller
 public class ToDoController {
-	 private final ToDoService todoService;
-
-	    public ToDoController(ToDoService todoService) {
-	        this.todoService = todoService;
+	 private final ToDoService toDoService;
+      //コントローラからサービスを使うためにDI
+	    public ToDoController(ToDoService toDoService) {
+	        this.toDoService = toDoService;
 	    }
-
 	    @GetMapping("/todo")
-	    public String first(Model model) {
-	       List<ToDo> todos = todoService.getAllTodos();
-	        model.addAttribute("todos", todos);
-	        return "todoView";
+		public String todo(Model model) {
+			List<ToDo> todos = toDoService.getAllTodos();
+			model.addAttribute("todos", todos);
+			return "todoView";
 	    }
-	
+}
 	
 	
 /*自分で描いたもの
@@ -35,4 +34,4 @@ public class ToDoController {
 	} */
 	
 
-}
+

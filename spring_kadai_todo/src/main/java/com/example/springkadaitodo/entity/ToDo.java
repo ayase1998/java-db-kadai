@@ -11,7 +11,6 @@ import lombok.Data;
 @Entity
 @Table(name = "todos")
 @Data
-
 public class ToDo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
